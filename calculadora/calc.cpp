@@ -1,43 +1,11 @@
 #include <iostream>
 #include <cmath>
+#include "calc.h"
 using namespace std;
-
-float suma(float a, float b) { 
-    return a + b;
-}
-float restar(float a, float b) { 
-    return a - b; 
-}
-float multiplicar(float a, float b) { 
-    return a * b; 
-}
-float dividir(float a, float b) {
-    if (b != 0) {
-        return a / b;
-    }
-    
-    else {
-        cout << "ERROR" << endl;
-        return 0;
-    }
-}
-float potencia(float a, float b){
-    return pow(a,b);
-}
-
-float raiz_2(float a){
-    if (a < 0){
-        cout << "ERROR" << endl;
-        return 0;
-    }
-    else{
-        return sqrt(a);
-    }
-}   
 
 int main(){
     char repetir = 's';
-    float num1, num2;
+    float num1, num2, res_anterior;
     char operacion;
 
     cout << "============== CALCULADORA ==============" << endl;
@@ -50,7 +18,7 @@ int main(){
     cout << "^ para potencia" << endl;
     cout << "2| para raiz cuadrada (ej: 2|9 es 'raiz cuadrada de 9')\n" << endl;
 
-    while (repetir == 's') {
+do{
         cin >> num1 >> operacion >> num2;
         switch (operacion){
             case '+':
@@ -75,10 +43,9 @@ int main(){
                 cout << "Operacion no válida." << endl;
                 break;
         }
-        cout << "Desea seguir calculando? (s/n): ";
-        cin >> repetir;
-        repetir = tolower(repetir);
-}
-    
+    cout << "Desea seguir calculando? (s/n): ";
+    cin >> repetir;
+    repetir = tolower(repetir);
+} while(repetir == 's');
     cout << "=========================================\n";
 }
