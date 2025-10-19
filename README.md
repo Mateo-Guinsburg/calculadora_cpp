@@ -24,7 +24,7 @@ El programa se ejecuta en bucle hasta que el usuario decida salir.
 
 El proyecto se basa en 2 archivos dentro de la carpeta `calculadora`:
 
-calculadora/main.cpp --> Programa principal
+calculadora/calc.cpp --> Programa principal
 
 calculadora/calc.h --> Biblioteca con las funciones matemáticas
 
